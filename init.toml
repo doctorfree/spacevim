@@ -1,0 +1,176 @@
+#=============================================================================
+# basic.toml --- basic configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    # colorscheme = "gruvbox"
+    # colorscheme = "material"
+    colorscheme = "NeoSolarized"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    guifont = "JetBrains Mono Nerd Font Mono:h18"
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "bar"
+    # statusline_inactive_separator = "arrow"
+    relativenumber = false
+
+    buffer_index_type = 4
+    windows_index_type = 3
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    statusline_unicode_symbols = true
+    # Enable vim compatible mode, avoid changing origin vim key bindings
+    vimcompatible = true
+
+    bootstrap_after = "lmspacevim#after"
+    bootstrap_before = "lmspacevim#before"
+    filemanager = "nerdtree"
+    autocomplete_parens = false
+    disabled_plugins = [ "delimitMate" ]
+
+[[custom_plugins]]
+  name = "vimwiki/vimwiki"
+[[custom_plugins]]
+  name = 'chazy/dirsettings'
+[[custom_plugins]]
+  name = 'ctrlpvim/ctrlp.vim'
+[[custom_plugins]]
+  name = 'tpope/vim-markdown'
+[[custom_plugins]]
+  name = 'sebdah/vim-delve'
+[[custom_plugins]]
+  name = "sebdah/vim-delve"
+[[custom_plugins]]
+  name = "buoto/gotests-vim"
+
+merged = 0
+
+# Enable autocomplete layer
+[[layers]]
+  name = 'autocomplete'
+  auto-completion-return-key-behavior = "complete"
+  #auto-completion-tab-key-behavior = "cycle"
+  auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+  name = 'shell'
+  default_position = 'top'
+  default_height = 30
+
+[[layers]]
+  name = "colorscheme"
+
+[[layers]]
+  name = "tmux"
+
+[[layers]]
+  name = "sudo"
+
+[[layers]]
+  name = "tools"
+
+[[layers]]
+  name = "ui"
+
+[[layers]]
+  name = "VersionControl"
+
+[[layers]]
+  name = "cscope"
+
+[[layers]]
+  name = "ctrlp"
+
+[[layers]]
+  name = "debug"
+
+[[layers]]
+  name = "default"
+
+[[layers]]
+  name = "edit"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
+  name = "lang#WebAssembly"
+
+[[layers]]
+  name = "lang#c"
+  clang_executable = "/usr/bin/clang"
+
+[[layers]]
+  name = "lang#dockerfile"
+
+[[layers]]
+  name = "lang#extra"
+
+[[layers]]
+  name = "lang#go"
+
+[[layers]]
+  name = "lang#html"
+
+[[layers]]
+  name = "lang#lua"
+
+[[layers]]
+  name = "lang#markdown"
+
+[[layers]]
+  name = "lang#perl"
+
+[[layers]]
+  name = "lang#php"
+
+[[layers]]
+  name = "lang#python"
+  format-on-save = 1
+
+[[layers]]
+  name = "lang#rust"
+
+[[layers]]
+  name = "lang#sh"
+
+[[layers]]
+  name = "lang#typescript"
+
+[[layers]]
+  name = "lang#vim"
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "javascript",
+    "sh",
+    "typescript",
+    "c",
+    "cpp",
+    "html",
+    "go",
+    "rust",
+    "python",
+    ]
+  [layer.pverridecmd]
+  rust = ["rustup", "run", "nightly", "rls"]
+  javascript = ['javascript-typescript-stdio']
+  sh = ['bash-language-server', 'start']
+  typescript = ['typescript-language-server', '--stdio']
+  c = ['clangd']
+  cpp = ['clangd']
+  html = ['html-languageserver', '--stdio']
+  go = ['go-langserver', '-mode', 'stdio']
