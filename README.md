@@ -6,7 +6,7 @@
 2. Install config:
 
 ```
-mkdir -p ~/vim_backups
+mkdir -p ~/.vim_backups
 [ -d ~/.SpaceVim.d ] && mv ~/.SpaceVim.d ~/.SpaceVim.d.bak
 git clone https://github.com/doctorfree/spacevim ~/.SpaceVim.d
 ```

@@ -24,8 +24,8 @@ function! lmspacevim#after() abort
 
 
   set backup
-  set backupdir=~/vim_backups
-  set dir=~/vim_backups
+  set backupdir=~/.vim_backups
+  set dir=~/.vim_backups
 
   let g:ctrlp_map = '<c-p>'
 
