@@ -174,3 +174,12 @@ merged = 0
   cpp = ['clangd']
   html = ['html-languageserver', '--stdio']
   go = ['go-langserver', '-mode', 'stdio']
+
+[[layers]]
+  name = "fzf"
+
+[[layers]]
+  name = "telescope"
+
+[[layers]]
+  name = "treesitter"
